@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online planner</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> <!--Link bootstrap css-->
+</head>
+<style>
+    body {
+        background: linear-gradient(rgb(228, 224, 224),rgb(66, 194, 203));
+    }
+    h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(102, 171, 122);
+        text-align: center;
+    }
+</style>
+<h1> My Online Planner</h1>
+<body class="container">
+    <br>
+    <div class="card"> <!--Bootstrap component that gives style to div using a class-->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group"> <!--Form-->
+                            <label for="new-start-date">Start Date</label>
+                            <input type="date" class="form-control" id="new-start-date">
+                        </div>
+                        </div>
+                            <div class="col-sm">
+                                <div class="form-group"> 
+                                    <label for="new-end-date">End Date</label>
+                                    <input type="date" class="form-control" id="new-end-date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-start-time">Start Time</label>
+                                <input type="datetime" class="form-control" id="new-start-time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-end-time">End Time</label>
+                                <input type="datetime" class="form-control" id="new-end-time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group"> 
+                                <label for="new-task">Task</label>
+                                    <input type="text" class="form-control" id="new-task" placeholder="Task">
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                        <button id="add" class="btn btn-primary from-control">Submit</button>
+                    </div>
+                </div>
+            </div>
+        <table id="list" class="table table-light table-striped">
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Start Date</th>
+                <th>Due Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+<script src="index.js"></script> <!--Link to javascript page-->
+<script src="node_modules/jquery/dist/jquery.js"></script> <!--Link jquery-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> <!--Link bootstrap bundle javascript-->
+</body>
+</html>
